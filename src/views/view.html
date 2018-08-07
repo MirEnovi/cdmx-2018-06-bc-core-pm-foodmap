@@ -30,29 +30,48 @@
     <!-- contenido -->
     <main class="row">
       <div class="col-sm-10 col-md-6 col-xl-6 offset-sm-1 offset-md-3 offset-xl-3 text-center">
-        <label>Comida cerca de ti</label>
+        <h4>Comida cerca de ti</h4>
         <!-- input de filtrado por tipo de comida -->
         <div class="input-group mb-3">
           <input id="search" type="text" class="form-control" placeholder="Tipo de Local de Comida">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-filter">
               Buscar
             </button>
           </div>
         </div>
+        <!-- tabla -->
+        <section class="container  justificar">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">LOCAL</th>
+                <th scope="col">INFO</th>
+              </tr>
+            </thead>
+            <tbody id="list_locals">
+            </tbody>
+          </table>
+        </section>
         <!-- imagenes -->
-        <div class="row">
-          <img class="col-sm-6 col-md-6 col-lg-7 col-xl-7" src="../imagenes/pizza-de-peperoni.jpg">
-          <img class="col-sm-6 col-md-6 col-lg-5 col-xl-5" src="../imagenes/c700x420.jpg" alt="">
-        </div>
-        <div class="row">
-          <img class="col-sm-6 col-md-6 col-lg-5 col-xl-5" src="../imagenes/hamburguesa.jpg">
-          <img class="col-sm-6 col-md-6 col-lg-7 col-xl-7" src="../imagenes/comida-mexicana-patrimonio.jpg" alt="">
-        </div>
+        <section id="images">
+          <div class="row">
+            <img class="col-sm-10 col-md-10 col-lg-7 offset-sm-1 offset-md-0" src="../imagenes/pizza-de-peperoni.jpg">
+            <img class="col-sm-10 col-md-10 col-lg-5 offset-sm-1 offset-md-0" src="../imagenes/c700x420.jpg" alt="">
+          </div>
+
+          <div class="row">
+            <img class="col-sm-10 col-md-10 col-lg-5 offset-sm-1 offset-md-0" src="../imagenes/hamburguesa.jpg">
+            <img class="col-sm-10 col-md-10 col-lg-7 offset-sm-1 offset-md-0" src="../imagenes/comida-mexicana-patrimonio.jpg" alt="">
+          </div>
+        </section>
       </div>
+      <!-- modal -->
 
     </main>
   </div>
+  <script src="../js/data.js"></script>
   <script src="../js/doom.js"></script>
 </body>
 
