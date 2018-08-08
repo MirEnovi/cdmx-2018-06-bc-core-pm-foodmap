@@ -45,9 +45,10 @@ window.realoadApi = (url) => {
 
 // function que itera locales
 window.getMexFood = (mexFood) => {
-  console.log(mexFood);
+  // console.log(mexFood);
   let arrayLocal = [];
   let objectLocal = {};
+  let localID;
   let localFood;
   let localName;
   let localDirection;
@@ -61,12 +62,14 @@ window.getMexFood = (mexFood) => {
     } else {
       localDirection = `En la zona centro de la ciudad, en ${localFood[i].location.country}`;
     }
-    console.log(localFood[i].categories[0].name);
+    localID = localFood[i].id;
+    // console.log(localFood[i].id);
 
     localCategory = localFood[i].categories[0].name;
     localNum++;
     objectLocal = {
       localNum,
+      localID,
       localName,
       localDirection,
       localCategory
