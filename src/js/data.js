@@ -9,7 +9,7 @@ window.filter = (search) => {
     stringSearch += letter;
   }
   getApi(stringSearch);
-  //   console.log(stringSearch);
+  console.log(stringSearch);
   return stringSearch;
 };
 
@@ -18,10 +18,12 @@ window.getApi = (query) => {
   let lat = 19.43;
   let lng = -99.13;
   // let queryS = 'comida%20mexicana';
-  let queryS = query;
+  // let queryS = query;
+  const key = window.objKey.key;
+  // console.log(key);
 
-  let url = mainUrl + lat + '%2C%20' + lng + '&query=' + queryS +
-    '&intent=browse&radius=2000&limit=30&client_id=ZP4OZIAYLCQC4OS1AGSFKASVXWYXCBJ4TXQGQ42YME4YV2DJ&client_secret=5JAKQV2CNB1NF1CJE0AZYKE5XIC0HAZIPBIA5N1AGQSB3B3N';
+  let url = mainUrl + lat + '%2C%20' + lng + '&query=' + query + key; 
+  // console.log(url);
   realoadApi(url);
   return url;
 };
@@ -38,7 +40,7 @@ window.realoadApi = (url) => {
     })
     .catch(error => {
       console.log(error);
-      alert('tu busqueda no arrojo resultados, intenta otra palabra');
+      // alert('tu busqueda no arrojo resultados, intenta otra palabra');
     });
 };
 
@@ -63,7 +65,7 @@ window.getMexFood = (mexFood) => {
       localDirection = `En la zona centro de la ciudad, en ${localFood[i].location.country}`;
     }
     localID = localFood[i].id;
-    // console.log(localFood[i].id);
+    console.log(localFood[i].categories[0].name);
 
     localCategory = localFood[i].categories[0].name;
     localNum++;

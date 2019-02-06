@@ -13,6 +13,7 @@ buttonFilter.addEventListener('click', clickFilter);
 
 window.drawnList = (locals) => {
   console.log(locals);
+  listLocals.innerHTML = '';
   for (let i = 0; i < locals.length; i++) {
     images.style.display = 'none';
     listLocals.innerHTML += `
